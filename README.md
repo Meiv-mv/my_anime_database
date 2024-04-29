@@ -1,6 +1,6 @@
 # my_anime_database
 A site that you can use to list films, tv series, anime, manga and books that you love!<br>
-**Link:** https://meiv-mv.github.io/my_anime_database/
+**Link:** https://meiv-mv.github.io/the-nerd-database/
 
 **Description:**<br>
 This is site is a project I made to practice OOP for frontend developing, so it will not have a storage, but I'll eventually work to make use local storage.<br>
