@@ -69,6 +69,11 @@ ul li{
   font-weight: 400;
 }
 
+.comment{
+  max-width: 270px;
+  word-wrap: break-word;
+}
+
 .Completed{
   background-color: limegreen;
   color: white;
@@ -97,9 +102,25 @@ ul li{
 }
 
 @media screen and (min-width: 1400px){
-  
   .list-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .comment{
+    max-width: 350px;
+    word-wrap: break-word;
+  }
+  
+}
+
+@media screen and (min-width: 1800px) {
+  .list-container{
+    gap: 50px;
+  }
+
+  .comment{
+    max-width: 450px;
+    word-wrap: break-word;
   }
 }

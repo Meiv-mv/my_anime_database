@@ -24,30 +24,36 @@ submitBtn.addEventListener("click", function(e){
 
   let item = new Item(imgFile.value, titleEl.value, typeEl.value, statusEl.value, ratingEl.value, commentEl.value)
   index.push(item)
-  for (let i = 0; i < index.length; i++){
-    listEl.innerHTML += `
-        <li class="item">
-          <img src="" alt="item pic">
-          <div class="item-info">
-            <p>Title:
-              <p class="internal-paragraph">${index[i].title}</p>
-            </p>
-            <p>Type:
-              <p class="internal-paragraph">${index[i].type}</p>
-            </p>
-            <p>Status:
-              <p class="internal-paragraph ${index[i].status}">${index[i].status}</p>
-            </p>
-            <p>Rating:
-              <p class="internal-paragraph">${index[i].rating}</p>
-            </p>
-          </div>
-          <div>Comment:
-            <p class="internal-paragraph">${index[i].comment}</p>
-          </div>
-        </li>`
-  }
+  renderItem(index)
 })
+
+function renderItem(arr){
+  let itemList = ""
+  for (let i = 0; i < arr.length; i++){
+    itemList +=`
+    <li class="item">
+      <img src="" alt="item pic">
+      <div class="item-info">
+        <p>Title:
+          <p class="internal-paragraph">${arr[i].title}</p>
+        </p>
+        <p>Type:
+          <p class="internal-paragraph">${arr[i].type}</p>
+        </p>
+        <p>Status:
+          <p class="internal-paragraph ${arr[i].status}">${arr[i].status}</p>
+        </p>
+        <p>Rating:
+          <p class="internal-paragraph">${arr[i].rating}</p>
+        </p>
+      </div>
+      <divc class="comment">Comment:
+        <p class="internal-paragraph">${arr[i].comment}</p>
+      </div>
+    </li>`
+  }
+  listEl.innerHTML = itemList
+}
 
 // listEl.innerHTML += `
 //         <li class="item">
