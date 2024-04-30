@@ -6,6 +6,7 @@ const typeEl = document.getElementById("type-select")
 const ratingEl = document.getElementById("rating")
 const commentEl = document.getElementById("comment")
 const ratingValue = document.getElementById("rating-value")
+const resetBtn = document.getElementById("reset-btn")
 let index = []
 
 class Item{
@@ -30,6 +31,12 @@ submitBtn.addEventListener("click", function(e){
   let item = new Item(imgFile.files[0], titleEl.value, typeEl.value, statusEl.value, ratingEl.value, commentEl.value)
   index.push(item)
   renderItem(index)
+  reset()
+})
+
+resetBtn.addEventListener("click", function(e){
+  e.preventDefault()
+  reset()
 })
 
 function renderItem(arr){
@@ -60,24 +67,15 @@ function renderItem(arr){
   listEl.innerHTML = itemList
 }
 
-// listEl.innerHTML += `
-//         <li class="item">
-//           <img src="${index[i].imgFile.value}" alt="item pic">
-//           <div class="item-info">
-//             <p>Title:
-//               <p class="internal-paragraph">${index[i].titleEl.value}</p>
-//             </p>
-//             <p>Type:
-//               <p class="internal-paragraph">${index[i].typeEl.value}</p>
-//             </p>
-//             <p>Status:
-//               <p class="internal-paragraph completed">${index[i].statusEl.value}</p>
-//             </p>
-//             <p>Rating:
-//               <p class="internal-paragraph">${index[i].ratingEl.value}</p>
-//             </p>
-//           </div>
-//           <div>Comment:
-//             <p class="internal-paragraph">${index[i].commentEl.value}</p>
-//           </div>
-//         </li>`
+function reset(){
+  imgFile.value = ""
+  titleEl.value = ""
+  typeEl.value = 0
+  let statusEl = document.querySelectorAll("input[type='radio']")
+  for (let i = 0; i < statusEl.length; i++){
+    statusEl[i].checked = false
+  }
+  ratingEl.value = 50
+  ratingValue.innerHTML = 50
+  commentEl.value = ""
+}
