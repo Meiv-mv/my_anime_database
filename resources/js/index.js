@@ -5,6 +5,7 @@ const titleEl = document.getElementById("title")
 const typeEl = document.getElementById("type-select")
 const ratingEl = document.getElementById("rating")
 const commentEl = document.getElementById("comment")
+const ratingValue = document.getElementById("rating-value")
 let index = []
 
 class Item{
@@ -17,6 +18,10 @@ class Item{
     this.comment = comment
   }
 }
+
+ratingEl.addEventListener("input", function(){
+  ratingValue.innerHTML = ratingEl.value
+})
 
 submitBtn.addEventListener("click", function(e){
   e.preventDefault()
