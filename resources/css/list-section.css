@@ -1,5 +1,5 @@
 .list-section{
-  height: 100px;
+  height: 100%;
   width: clamp(300px, 90%, 1200px);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -7,5 +7,79 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+  border-bottom: 5px solid white;
+}
+
+ul{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+ul li{
+  list-style: none;
+}
+
+.item{
+  width: clamp(280px, 90%, 400px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.item img{
+  background-color: white;
+  width: 270px;
+  height: 190px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.item-info{
+  display: grid;
+  grid-template-columns: 250px;
+}
+
+.internal-paragraph{
+  background-color: whitesmoke;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  color: black;
+  margin: 2px 0;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.completed{
+  background-color: limegreen;
+  color: white;
+}
+
+.on-going{
+  background-color: goldenrod;
+  color: white;
+}
+
+.paused{
+  background-color: brown;
   color: white;
 }
