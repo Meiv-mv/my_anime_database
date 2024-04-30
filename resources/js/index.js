@@ -22,7 +22,7 @@ submitBtn.addEventListener("click", function(e){
   e.preventDefault()
   let statusEl = document.querySelector("input[type='radio']:checked")
 
-  let item = new Item(imgFile.value, titleEl.value, typeEl.value, statusEl.value, ratingEl.value, commentEl.value)
+  let item = new Item(imgFile.files[0], titleEl.value, typeEl.value, statusEl.value, ratingEl.value, commentEl.value)
   index.push(item)
   renderItem(index)
 })
@@ -32,7 +32,7 @@ function renderItem(arr){
   for (let i = 0; i < arr.length; i++){
     itemList +=`
     <li class="item">
-      <img src="" alt="item pic">
+      <img src="${URL.createObjectURL(arr[i].img)}" alt="item pic">
       <div class="item-info">
         <p>Title:
           <p class="internal-paragraph">${arr[i].title}</p>

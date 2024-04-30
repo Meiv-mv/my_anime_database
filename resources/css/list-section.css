@@ -45,6 +45,7 @@ ul li{
 }
 
 .item img{
+  object-fit: cover;
   background-color: white;
   width: 270px;
   height: 190px;
