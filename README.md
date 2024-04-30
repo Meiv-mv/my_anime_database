@@ -7,4 +7,7 @@ This is site is a project I made to practice OOP for frontend developing, so it 
 The goal of this project is to effectively use OOP in order to render a list of every item(films, tv series, anime, manga, books) the user want to store.
 
 **Future Update:**
-  - TBA
+  - Local Storage
+  - Dark Theme
+  - Server Side
+  - Update Minor Feature
