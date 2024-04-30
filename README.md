@@ -8,6 +8,7 @@ The goal of this project is to effectively use OOP in order to render a list of 
 
 **Future Update:**
   - Local Storage
+  - More Responsivness for larger screen
   - Dark Theme
   - Server Side
   - Update Minor Feature
