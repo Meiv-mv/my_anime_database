@@ -44,7 +44,7 @@ function renderItem(arr){
   for (let i = 0; i < arr.length; i++){
     itemList +=`
     <li class="item">
-      <img src="${URL.createObjectURL(arr[i].img)}" alt="item pic">
+      <img src="${arr[i].img ? URL.createObjectURL(arr[i].img) : "resources/img/sample.jpg"}" alt="item pic">
       <div class="item-info">
         <p>Title:
           <p class="internal-paragraph">${arr[i].title}</p>
@@ -66,6 +66,8 @@ function renderItem(arr){
   }
   listEl.innerHTML = itemList
 }
+
+// URL.createObjectURL(arr[i].img)
 
 function reset(){
   imgFile.value = ""
